@@ -5,20 +5,21 @@
         <img src="../assets/logo.png" alt="postIt">
       </div>
       <div class="search-container">
-        <input type="text" name="search"><button type="button">Search</button>
+        <input type="text" name="search">
+        <button type="button">Search</button>
       </div>
       <div class="avatar-container">
-        <img class="avatar">
-        <div class="drop-down-container">
+        <img class="avatar" @click="toggleInfo">
+        <div class="drop-down-container" v-show="showInfo">
           <span id="user-name">John Doe</span>
           <span id="user-email"></span>
           <span class="separator"></span>
-          <span> 
-              <a href="browse.html">Browse</a>
+          <span>
+            <router-link to="/browse">Browse</router-link>
             </span>
           <span class="separator"></span>
           <span>
-              <a href="login.html">Log Out</a>
+              <router-link to="/"> Log Out</router-link>
             </span>
         </div>
       </div>
@@ -28,10 +29,21 @@
 
 <script>
 export default {
-name: 'Header'
+  name: 'Header',
+  data:function(){
+    return{
+      showInfo: false
+    }
+  },
+  methods: {
+    toggleInfo: function (){
+      this.showInfo = !this.showInfo
+    }
+  }
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 header {
   position: fixed;
@@ -86,5 +98,25 @@ nav div.search-container > button {
 nav div.avatar-container {
   margin-right: 15px;
   text-align: right;
+}
+.avatar{
+  cursor: pointer;
+}
+.drop-down-container {
+  position: absolute;
+  min-width: 150px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 10px;
+  right: 0;
+  top: 50px;
+  text-align: left;
+}
+.drop-down-container span{
+  display: block;
+}
+.drop-down-container span.separator{
+  border-bottom: 1px solid #d7d7d7;
+  margin: 10px -10px;
 }
 </style>
