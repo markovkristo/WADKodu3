@@ -5,11 +5,12 @@ import VueRouter from 'vue-router'
 import Login from "./components/Login.vue";
 import PostPage from "./components/PostPage";
 import Browse from "./components/Browse";
-import store from './store'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 Vue.use(Vuex);
+
+
 
 const routes = [
   {path: '/' ,component: Login},
@@ -26,8 +27,3 @@ new Vue({
 }).$mount('#app')
 
 // mingi axios vark
-new Vue({
-
-store,
-render: h => h(App)
-})
