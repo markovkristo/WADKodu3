@@ -98,9 +98,9 @@ nav div.search-container > button {
 
 .main-container {
   width: 50%;
-  min-height: 10px;
+
   margin: auto auto;
-  padding: 1px 15px 1px 15px;
+  padding: 50px 15px 1px 15px;
   background-color: #ffffff;
 }
 
