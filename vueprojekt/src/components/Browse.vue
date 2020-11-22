@@ -1,30 +1,37 @@
 <template>
   <section class="main-container">
-    <div class="profile">
-      <h2 v-for="item in info" :key="item.firstname">
+    <div class="profile" v-for="item in info" :key="item.avatar">
+
+      <img :src="item.avatar" alt = "item.alt">
+      <h2>
         {{ item.firstname + " " +item.lastname}}
       </h2>
-      <img v-for="item in info" :key="item.avatar" :src="item.avatar" alt = "item.alt">
-      <button v-for="item in info" :key="item.firstname" class="follow-button">Follow</button>
+
+        <custom-button></custom-button>
+
     </div>
   </section>
 </template>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 <script>
+
 import axios from 'axios';
-
-
+import CustomButton from './button.vue'
 
 
 export default {
 name: "get-request",
   data() {
     return {
+      selected: false,
       info: []
-    };
+    }
   },
+  components: { CustomButton },
+
+
   created() {
     // Simple GET request using axios
     axios.get('https://private-517bb-wad20postit.apiary-mock.com/profiles')
@@ -37,6 +44,8 @@ name: "get-request",
 </script>
 
 <style scoped>
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
 .main-container {
     width: 50%;
@@ -55,26 +64,25 @@ name: "get-request",
     margin: 1%;
 }
 .profile img{
-    width: 75px;
+
     height: 75px;
+    display: block;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+
+
     border-radius: 100%;
     object-fit: cover;
     object-position: top;
-    margin: 5px;
+
 }
 
 .profile h2{
     font-size: 16px;
+    font-family: 'Roboto Slab', serif;
 }
 
-.follow-button{
-    background-color: #82008f;
-}
-
-.follow-button.followed{
-    background-color: #ffffff;
-    border: 1px solid #82008f;
-    color: #82008f;
-}
 
 </style>
