@@ -26,7 +26,7 @@ export default {
   background-repeat: no-repeat;
   background-position: 5px center;
   background-color: #8a8a8a;
-  width: 60px;
+  width: 70px;
   height: 25px;
   line-height: 10px;
   text-align: center;
@@ -39,7 +39,7 @@ export default {
   background-repeat: no-repeat;
   background-position: 5px center;
   background-color: #01579b;
-  width: 60px;
+  width: 70px;
   height: 25px;
   line-height: 10px;
   text-align: center;

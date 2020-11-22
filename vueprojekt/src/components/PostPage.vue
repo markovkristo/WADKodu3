@@ -20,11 +20,11 @@
             </video>
           </div>
       </div>
-        <div class="post-actions">
-          <custom-button>{{ item.likes }}</custom-button>
-      </div>
       <div class="post-title">
         <h3>{{item.text}}</h3>
+      </div>
+      <div class="post-actions">
+        <custom-button>{{ item.likes }}</custom-button>
       </div>
     </div>
 
@@ -122,7 +122,9 @@ nav div.search-container > input {
   padding: 5px;
   border: 1px solid #e0e0e0;
 }
-
+.post-actions{
+  padding: 10px;
+}
 nav div.search-container > button {
   height: 30px;
   width: 20%;
