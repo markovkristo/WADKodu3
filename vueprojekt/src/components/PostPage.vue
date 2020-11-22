@@ -21,7 +21,7 @@
           </div>
       </div>
         <div class="post-actions">
-          <custom-button></custom-button>
+          <custom-button>{{ item.likes }}</custom-button>
       </div>
       <div class="post-title">
         <h3>{{item.text}}</h3>
@@ -81,19 +81,6 @@ a {
   margin: 4px 0;
 }
 
-button {
-  padding: 8px 16px;
-  margin: 4px 0;
-  color: #ffffff;
-  background-color: #01579b;
-  border: none;
-  border-radius: 4px;
-}
-
-button:hover {
-  box-shadow: 0 0 5px rgba(38, 50, 56, 0.7);
-  cursor: pointer;
-}
 
 header {
   position: fixed;
