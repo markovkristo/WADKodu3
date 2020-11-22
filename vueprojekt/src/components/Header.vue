@@ -12,7 +12,8 @@
         <img @click="toggleInfo" :src="info.avatar" alt = "avatar.alt" class = "avatar">
         <div class="drop-down-container" v-show="showInfo">
           <span id="user-name">
-            {{info.firstname + " " +info.lastname}}
+            {{info.firstname| capitalize}}
+            {{ info.lastname | capitalize}}
           </span>
           <span id="user-email">
             {{ info.email }}
@@ -33,6 +34,7 @@
 
 <script>
 import axios from 'axios';
+import capitalize from "@/models/Filter";
 export default {
   name: 'get-request',
   data:function(){
@@ -45,6 +47,9 @@ export default {
     toggleInfo: function (){
       this.showInfo = !this.showInfo
     }
+  },
+  filters: {
+    capitalize: capitalize
   },
   created() {
     axios.get('https://private-anon-90de795816-wad20postit.apiary-mock.com/users/1')

@@ -6,7 +6,8 @@
 
       <img :src="item.avatar" alt = "item.alt">
       <h2>
-        {{ item.firstname + " " +item.lastname}}
+        {{ item.firstname | capitalize }}
+        {{item.lastname | capitalize}}
       </h2>
 
         <custom-button></custom-button>
@@ -22,7 +23,7 @@
 import Header from "@/components/Header";
 import axios from 'axios';
 import CustomButton from './button.vue'
-
+import capitalize from "@/models/Filter";
 
 export default {
 name: "get-request",
@@ -34,7 +35,9 @@ name: "get-request",
   },
   components: {Header, CustomButton},
 
-
+  filters: {
+    capitalize: capitalize
+  },
   created() {
     // Simple GET request using axios
     axios.get('https://private-517bb-wad20postit.apiary-mock.com/profiles')

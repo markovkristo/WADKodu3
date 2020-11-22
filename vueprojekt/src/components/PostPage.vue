@@ -6,7 +6,8 @@
       <span class="post-author">
             <span class="post-author-info">
                 <img :src="item.author.avatar" alt="item.author.firstname">
-                  <small>{{ item.author.firstname + " " + item.author.lastname }}</small>
+                  <small>{{ item.author.firstname | capitalize}}
+                    {{item.author.lastname | capitalize }}</small>
             </span>
           <small>{{ item.createTime }}</small>
               </span>
@@ -21,7 +22,7 @@
           </div>
       </div>
       <div class="post-title">
-        <h3>{{item.text}}</h3>
+        <h3>{{item.text | capitalize}}</h3>
       </div>
       <div class="post-actions">
         <custom-button>{{ item.likes }}</custom-button>
@@ -36,7 +37,7 @@
 import Header from "@/components/Header";
 import axios from 'axios';
 import CustomButton from './likeButton.vue'
-
+import capitalize from "@/models/Filter";
 export default {
 
   name: "get-request",
@@ -44,6 +45,9 @@ export default {
     return {
       info: []
     };
+  },
+  filters: {
+    capitalize: capitalize
   },
   created() {
     axios.get('https://private-anon-2a389ff8f6-wad20postit.apiary-mock.com/posts')
@@ -75,53 +79,11 @@ a {
   color: #40c4ff;
 }
 
-
 #login-container form div > input {
   padding: 8px 16px;
   margin: 4px 0;
 }
 
-
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1;
-}
-
-header:hover {
-  box-shadow: 0 -20px 30px #4d4d4d;
-}
-
-nav {
-  display: flex;
-  background-color: #ffffff;
-  align-items: center;
-}
-
-nav div {
-  height: 30px;
-  flex-grow: 4;
-  padding: 10px;
-}
-
-nav div img {
-  height: 100%;
-  width: 30px;
-  margin-left: 15px;
-  border-radius: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-
-nav div.search-container > input {
-  box-sizing: border-box;
-  height: 30px;
-  width: 80%;
-  margin: 0;
-  padding: 5px;
-  border: 1px solid #e0e0e0;
-}
 .post-actions{
   padding: 10px;
 }
