@@ -1,4 +1,6 @@
 <template>
+  <body>
+  <Header></Header>
   <section class="main-container">
     <div class="profile" v-for="item in info" :key="item.avatar">
 
@@ -11,12 +13,13 @@
 
     </div>
   </section>
+  </body>
 </template>
 
 
 
 <script>
-
+import Header from "@/components/Header";
 import axios from 'axios';
 import CustomButton from './button.vue'
 
@@ -29,7 +32,7 @@ name: "get-request",
       info: []
     }
   },
-  components: { CustomButton },
+  components: {Header, CustomButton },
 
 
   created() {
