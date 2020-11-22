@@ -9,12 +9,14 @@
         <button type="button" class="button">Search</button>
       </div>
       <div class="avatar-container">
-        <img @click="toggleInfo">
+        <img @click="toggleInfo" :src="info.avatar" alt = "avatar.alt" class = "avatar">
         <div class="drop-down-container" v-show="showInfo">
-          <span id="user-name" v-for="item in info" :key="item.firstname">
-            {{ item.firstname + " " +item.lastname}}
+          <span id="user-name">
+            {{info.firstname + " " +info.lastname}}
           </span>
-          <span id="user-email"></span>
+          <span id="user-email">
+            {{ info.email }}
+          </span>
           <span class="separator"></span>
           <span>
             <router-link to="/browse">Browse</router-link>
@@ -32,7 +34,7 @@
 <script>
 import axios from 'axios';
 export default {
-  name: 'Header',
+  name: 'get-request',
   data:function(){
     return{
       showInfo: false,
@@ -46,10 +48,10 @@ export default {
   },
   created() {
     axios.get('https://private-anon-90de795816-wad20postit.apiary-mock.com/users/1')
-    .then(response => {
-      console.log(response.data)
-      this.info = response.data
-    })
+      .then(response => {
+        console.log(response.data)
+        this.info = response.data
+     })
   }
 };
 </script>

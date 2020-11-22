@@ -32,7 +32,7 @@ name: "get-request",
       info: []
     }
   },
-  components: {Header, CustomButton },
+  components: {Header, CustomButton},
 
 
   created() {
