@@ -59,5 +59,168 @@ export default {
 
 <style scoped>
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #0277bd;
+  color: #263238;
+}
+
+a {
+  color: #40c4ff;
+}
+
+
+#login-container form div > input {
+  padding: 8px 16px;
+  margin: 4px 0;
+}
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+header:hover {
+  box-shadow: 0 -20px 30px #4d4d4d;
+}
+
+nav {
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+nav div {
+  height: 30px;
+  flex-grow: 4;
+  padding: 10px;
+}
+
+nav div img {
+  height: 100%;
+  width: 30px;
+  margin-left: 15px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+nav div.search-container > input {
+  box-sizing: border-box;
+  height: 30px;
+  width: 80%;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+nav div.search-container > button {
+  height: 30px;
+  width: 20%;
+  margin: 0;
+  padding: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.main-container {
+  width: 50%;
+  min-height: 10px;
+  margin: auto auto;
+  padding: 1px 15px 1px 15px;
+  background-color: #ffffff;
+}
+
+.post {
+  width: 80%;
+  margin: 15px auto;
+  box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
+  border-radius: 5px;
+}
+
+.post .post-author {
+  padding: 10px;
+}
+
+.post .post-author::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.post .post-author .post-author-info {
+  float: left;
+  position: relative;
+  width: 50%;
+}
+
+.post .post-author .post-author-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: top;
+  margin: 5px;
+}
+
+.post .post-author .post-author-info small {
+  position: absolute;
+  top: 10px;
+  left: 35px;
+}
+
+.post .post-author .post-author-info + small {
+  float: right;
+  color: grey;
+  padding: 10px;
+}
+
+.post .post-image img, video {
+  width: 100%;
+  min-height: 150px;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.post .post-title {
+  padding: 10px;
+}
+
+.post .post-title h3 {
+  display: inline;
+}
+
+
+
+
+.drop-down-container span{
+  display: block;
+}
+
+
+
+.profile img{
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: top;
+  margin: 5px;
+}
+
+.profile h2{
+  font-size: 16px;
+}
+
 
 </style>
