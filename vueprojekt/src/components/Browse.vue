@@ -1,13 +1,4 @@
 <template>
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="res/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="res/js/browse.js"></script>
-    <title>postIt! Just Post It</title>
-  </head>
-  <body>
   <header>
     <nav>
       <div class="logo-container">
@@ -33,8 +24,6 @@
       </div>
     </nav>
   </header>
-  <section class="main-container"></section>
-  </body>
 </template>
 
 <script>

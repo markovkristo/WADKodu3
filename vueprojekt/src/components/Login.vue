@@ -1,11 +1,4 @@
 <template>
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="res/css/style.css">
-    <title>Welcome to postIt! Please Log In</title>
-  </head>
-  <body>
   <section class="login-page">
     <section id="login-container">
       <div>
@@ -29,7 +22,9 @@
             <input type="password" name="password" placeholder="Password">
           </div>
           <div>
-            <button class="button" type="submit" name="login">Log In</button>
+            <button class="button" type="submit" name="login">
+              <router-link to="/postPage">Log In</router-link>
+            </button>
           </div>
           <div>
             <small>
@@ -40,7 +35,6 @@
       </div>
     </section>
   </section>
-  </body>
 </template>
 
 <script>

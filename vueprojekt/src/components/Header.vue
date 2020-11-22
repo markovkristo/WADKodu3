@@ -6,7 +6,7 @@
       </div>
       <div class="search-container">
         <input type="text" name="search">
-        <button type="button">Search</button>
+        <button type="button" class="button">Search</button>
       </div>
       <div class="avatar-container">
         <img class="avatar" @click="toggleInfo">
@@ -93,6 +93,9 @@ nav div.search-container > button {
   padding: 5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.button{
+  cursor: pointer;
 }
 
 nav div.avatar-container {

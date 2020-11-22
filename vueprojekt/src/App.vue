@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <Header/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 
+//import PostPage from "@/components/PostPage";
+//import Login from "@/components/Login";
 export default {
   name: 'App',
-
+  //components: {Login}
 }
 </script>
 
@@ -24,5 +25,13 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+}
+body {
+  background-color: #0277bd;
+  color: #263238;
+}
+
+a {
+  color: #40c4ff;
 }
 </style>
