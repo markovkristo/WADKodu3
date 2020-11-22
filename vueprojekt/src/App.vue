@@ -1,23 +1,13 @@
 <template>
   <body id="app" class="main">
-    <Header></Header>
     <router-view></router-view>
   </body>
 </template>
 
 <script>
 
-//import Header from "@/components/Header.vue";
-//import PostPage from "@/components/PostPage";
-//import Login from "@/components/Login";
-
-import Header from "@/components/Header";
 export default {
-  name: 'App',
-  components: {
-    Header,
-    //Header
-  }
+  name: 'App'
 }
 </script>
 

@@ -96,6 +96,12 @@ nav div.search-container > button {
 }
 .button{
   cursor: pointer;
+  padding: 8px 16px;
+  margin: 4px 0;
+  color: #ffffff;
+  background-color: #01579b;
+  border: none;
+  border-radius: 4px;
 }
 
 nav div.avatar-container {
