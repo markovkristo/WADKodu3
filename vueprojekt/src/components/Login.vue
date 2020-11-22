@@ -77,6 +77,10 @@ button {
   border: none;
   border-radius: 4px;
 }
+button > a{
+  text-decoration: none;
+  color: white;
+}
 
 button:hover {
   box-shadow: 0 0 5px rgba(38, 50, 56, 0.7);
