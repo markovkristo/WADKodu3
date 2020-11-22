@@ -1,24 +1,32 @@
 <template>
-  <div id="app">
+  <body id="app" class="main">
     <Header></Header>
     <router-view></router-view>
-  </div>
+  </body>
 </template>
 
 <script>
 
-import Header from "@/components/Header.vue";
+//import Header from "@/components/Header.vue";
 //import PostPage from "@/components/PostPage";
 //import Login from "@/components/Login";
+
+import Header from "@/components/Header";
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    //Header
   }
 }
 </script>
 
 <style>
+
+.main{
+
+}
+
 * {
   font-family: 'Roboto Slab', serif;
   outline: none;
@@ -29,6 +37,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+
 }
 body {
   background-color: #0277bd;
