@@ -16,16 +16,18 @@
           </div>
           <div class="post-image" v-if="item.media.type === 'video'">
             <video controls>
-            <source type="video/mp4" src="item.media.url">
+            <source type="video/mp4" :src="item.media.url">
             </video>
           </div>
       </div>
         <div class="post-actions">
+          <custom-button></custom-button>
+      </div>
+      <div class="post-title">
+        <h3>{{item.text}}</h3>
       </div>
     </div>
-    <div class="post-title">
-      <h3>{{item.text}}</h3>
-    </div>
+
   </section>
   </body>
 </template>
@@ -33,8 +35,10 @@
 <script>
 import Header from "@/components/Header";
 import axios from 'axios';
+import CustomButton from './likeButton.vue'
 
 export default {
+
   name: "get-request",
   data() {
     return {
@@ -48,13 +52,14 @@ export default {
           this.info = response.data
         })
   },
-  components: {Header}
+  components: {Header, CustomButton}
 }
 
 </script>
 
 <style scoped>
-hhtml, body {
+
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -69,7 +74,6 @@ body {
 a {
   color: #40c4ff;
 }
-
 
 
 #login-container form div > input {
@@ -141,10 +145,9 @@ nav div.search-container > button {
   border-bottom-left-radius: 0;
 }
 
-
 .main-container {
   width: 50%;
-  min-height: 100%;
+  min-height: 10px;
   margin: auto auto;
   padding: 90px 15px 15px 15px;
   background-color: #ffffff;
@@ -202,13 +205,13 @@ nav div.search-container > button {
   object-position: top center;
 }
 
-
+.post .post-title {
+  padding: 10px;
+}
 
 .post .post-title h3 {
   display: inline;
 }
-
-
 
 
 
