@@ -24,6 +24,28 @@ const router = new VueRouter({
 new Vue({
   router,
   render: h => h(App),
+
+
+
+
+  methods: {
+    klikati: function () {
+      if (this.hasClass('followed')) {
+        this.removeClass('followed')
+        this.text('Follow')
+
+      } else {
+        this.addClass('followed')
+        this.text('Followed')
+      }
+
+    }
+  }
+
+
+
+
+
 }).$mount('#app')
 
 // mingi axios vark
