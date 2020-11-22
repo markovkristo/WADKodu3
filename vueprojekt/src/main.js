@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Login from "./components/Login.vue";
 import PostPage from "./components/PostPage";
 import Browse from "./components/Browse";
+import store from './store'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -23,3 +24,10 @@ new Vue({
   router,
   render: h => h(App),
 }).$mount('#app')
+
+// mingi axios vark
+new Vue({
+
+store,
+render: h => h(App)
+})
